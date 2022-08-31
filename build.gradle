@@ -24,7 +24,7 @@ buildscript {
         coroutines_version = '1.4.2'
         kotlin_version = '1.5.31'
         lifecycle_version = '2.3.1'
-        material_version = '1.4.0'
+        material_version = '1.6.0'
         nav_version = '2.3.5'
         room_version = '2.3.0'
     }
