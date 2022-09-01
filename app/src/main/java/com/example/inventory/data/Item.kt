@@ -6,6 +6,9 @@ import androidx.room.PrimaryKey
 
 //Represent database entity of the app
 
+/**
+ * Entity data class represents a single row in the database.
+ */
 @Entity
 data class Item(
     @PrimaryKey(autoGenerate = true)
