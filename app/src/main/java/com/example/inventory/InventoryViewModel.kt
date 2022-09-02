@@ -64,6 +64,7 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
         }
     }
 
+    //sellItem fun
     fun sellItem(item: Item) {
         if (item.quantityInStock > 0) {
             //Decrease the quantity by 1
@@ -75,6 +76,14 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
     fun isStockAvailable(item: Item): Boolean {
         return (item.quantityInStock > 0)
     }
+
+    //deleteItem fun
+    fun deleteItem(item: Item) {
+        viewModelScope.launch {
+            itemDao.delete(item)
+        }
+    }
+
 }
 
 class InventoryViewModelFactory(private val itemDao: ItemDao) : ViewModelProvider.Factory {
